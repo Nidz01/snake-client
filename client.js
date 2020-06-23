@@ -16,22 +16,6 @@ const connect = function() {
  conn.on('connect', () => {
    console.log('"Successfully connected to game server" ');
    conn.write('Name: NQK');
-   /*
-   // timers for snake to move in different directions upon connection with server
-   setTimeout(() => { 
-    conn.write("Move: up");
-   }, 2000);
-   setTimeout(() => { 
-    conn.write("Move: left");
-   }, 4000);
-   setTimeout(() => { 
-    conn.write("Move: down");
-   }, 6000);
-   setTimeout(() => { 
-    conn.write("Move: right");
-   }, 8000);
-   */
-  });
   
   /* An event handler to handle incoming
   data and console log it for the player.
