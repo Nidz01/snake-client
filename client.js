@@ -9,7 +9,15 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
-
+ 
+ /* An event handler to print a message to the screen
+  when connection is successfully established.
+  */
+ conn.on('connect', () => {
+   console.log('"Successfully connected to game server" ');
+   conn.write('Name: NQK');
+  });
+ 
   /* An event handler to handle incoming 
   data and console log it for the player.
   */
@@ -18,6 +26,6 @@ const connect = function() {
   });
 
   return conn;
-}
+};
 
 module.exports = connect;
